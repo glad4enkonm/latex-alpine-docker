@@ -1,0 +1,122 @@
+# LaTeX temporary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.lol
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.brf
+*.thm
+*.figlist
+*.makefile
+*.figlist
+*.figlist.bak
+*.figlist.old
+*.listing
+*.loa
+*.loe
+*.pyg
+*.maf
+*.mtc*
+*.mlf*
+*.mlt*
+*.ptc
+*.xdy
+
+# LaTeX build directories
+_minted-*/
+auto/
+
+# Generated PDF files (uncomment if you want to exclude PDFs)
+# Comment out these lines if you want to include generated PDFs in git
+test/*.pdf
+*.pdf
+
+# XeLaTeX/LuaLaTeX cache
+*.upa
+*.upb
+
+# Temporary files from text editors
+*~
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker related (if needed)
+.dockerignore
+
+# IDE/Editor specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js (if using any JS tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using any Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Keep important files
+!README.md
+!Dockerfile
+!run.sh
+!test/test-all.sh
+!test/*.tex
+
+# Custom exclusions for this project
+# Add any project-specific files to ignore here

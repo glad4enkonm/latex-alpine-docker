@@ -1,0 +1,234 @@
+\documentclass[12pt,a4paper]{report}
+
+% Russian language support
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+% Fonts with Cyrillic support
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% Packages for enhanced document
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+
+% Page setup
+\geometry{margin=2.5cm}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Подготовка к экзамену}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\textit{Учебные материалы}}
+
+% Chapter styling
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\color{blue!60!black}}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Document metadata
+\title{\textbf{Подготовка к экзамену}\\\large Конспект лекций и формулы}
+\author{Студент}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+
+{\huge\bfseries Подготовка к экзамену\par}
+\vspace{1cm}
+{\Large Конспект лекций и основные формулы\par}
+\vspace{2cm}
+
+{\large Предмет: \textbf{Математический анализ}\par}
+\vspace{0.5cm}
+{\large Курс: \textbf{1-й курс}\par}
+\vspace{0.5cm}
+{\large Семестр: \textbf{Весенний 2024}\par}
+
+\vspace{3cm}
+
+{\Large Студент: \textbf{Иван Петров}\par}
+\vspace{0.5cm}
+{\large Группа: \textbf{МТ-101}\par}
+\vspace{0.5cm}
+{\large Преподаватель: \textbf{Профессор Сидоров А.И.}\par}
+
+\vfill
+
+{\large Москва\par}
+{\large \today\par}
+\end{titlepage}
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Introduction
+\chapter*{Введение}
+\addcontentsline{toc}{chapter}{Введение}
+
+Этот конспект содержит основные темы курса математического анализа, необходимые для подготовки к экзамену. Каждая глава соответствует отдельной экзаменационной теме.
+
+\textbf{Структура документа:}
+\begin{itemize}
+    \item Теоретический материал
+    \item Основные формулы и определения
+    \item Примеры решения задач
+    \item Графики и иллюстрации
+\end{itemize}
+
+% Chapter 1: Limits
+\chapter{Пределы функций}
+
+\section{Определение предела}
+Предел функции $f(x)$ при $x \to a$ равен $L$, если:
+\begin{equation}
+\lim_{x \to a} f(x) = L \iff \forall \varepsilon > 0 \, \exists \delta > 0 : |x - a| < \delta \Rightarrow |f(x) - L| < \varepsilon
+\end{equation}
+
+\section{Основные пределы}
+\begin{align}
+\lim_{x \to 0} \frac{\sin x}{x} &= 1 \\
+\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x &= e \\
+\lim_{x \to 0} \frac{e^x - 1}{x} &= 1 \\
+\lim_{x \to 0} \frac{\ln(1 + x)}{x} &= 1
+\end{align}
+
+\section{Пример решения}
+\textbf{Задача:} Найти $\lim_{x \to 0} \frac{\sin 3x}{2x}$
+
+\textbf{Решение:}
+\begin{align}
+\lim_{x \to 0} \frac{\sin 3x}{2x} &= \lim_{x \to 0} \frac{3 \sin 3x}{6x} \cdot \frac{3}{2} \\
+&= \frac{3}{2} \lim_{x \to 0} \frac{\sin 3x}{3x} \\
+&= \frac{3}{2} \cdot 1 = \frac{3}{2}
+\end{align}
+
+% Chapter 2: Derivatives
+\chapter{Производные функций}
+
+\section{Определение производной}
+Производная функции $f(x)$ в точке $x_0$:
+\begin{equation}
+f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+\end{equation}
+
+\section{Таблица производных}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Функция} & \textbf{Производная} \\
+\hline
+$x^n$ & $nx^{n-1}$ \\
+$e^x$ & $e^x$ \\
+$\ln x$ & $\frac{1}{x}$ \\
+$\sin x$ & $\cos x$ \\
+$\cos x$ & $-\sin x$ \\
+$\tan x$ & $\sec^2 x$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Правила дифференцирования}
+\begin{itemize}
+    \item $(u + v)' = u' + v'$ — производная суммы
+    \item $(uv)' = u'v + uv'$ — производная произведения
+    \item $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ — производная частного
+    \item $(f(g(x)))' = f'(g(x)) \cdot g'(x)$ — правило цепочки
+\end{itemize}
+
+% Chapter 3: Integrals  
+\chapter{Интегралы}
+
+\section{Неопределённый интеграл}
+Неопределённый интеграл функции $f(x)$:
+\begin{equation}
+\int f(x) dx = F(x) + C
+\end{equation}
+где $F'(x) = f(x)$ и $C$ — константа интегрирования.
+
+\section{Основные интегралы}
+\begin{align}
+\int x^n dx &= \frac{x^{n+1}}{n+1} + C \quad (n \neq -1) \\
+\int \frac{1}{x} dx &= \ln|x| + C \\
+\int e^x dx &= e^x + C \\
+\int \sin x dx &= -\cos x + C \\
+\int \cos x dx &= \sin x + C
+\end{align}
+
+\section{Определённый интеграл}
+Формула Ньютона-Лейбница:
+\begin{equation}
+\int_a^b f(x) dx = F(b) - F(a)
+\end{equation}
+
+% Chapter 4: Series
+\chapter{Ряды}
+
+\section{Степенные ряды}
+Степенной ряд имеет вид:
+\begin{equation}
+\sum_{n=0}^{\infty} a_n (x - c)^n = a_0 + a_1(x-c) + a_2(x-c)^2 + \ldots
+\end{equation}
+
+\section{Разложения в ряд Тейлора}
+\begin{align}
+e^x &= \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots \\
+\sin x &= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots \\
+\cos x &= \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots
+\end{align}
+
+% Add a simple graph using TikZ
+\section{График функции}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel={$x$},
+    ylabel={$y$},
+    domain=-2*pi:2*pi,
+    samples=100,
+    grid=major,
+    title={График функции $y = \sin x$}
+]
+\addplot[blue, thick] {sin(deg(x))};
+\end{axis}
+\end{tikzpicture}
+\caption{Синусоида}
+\end{figure}
+
+% Conclusion
+\chapter*{Заключение}
+\addcontentsline{toc}{chapter}{Заключение}
+
+Данный конспект охватывает основные темы курса математического анализа. Для успешной сдачи экзамена рекомендуется:
+
+\begin{enumerate}
+    \item Выучить все основные формулы
+    \item Решить дополнительные задачи
+    \item Повторить теоретический материал
+    \item Практиковаться в вычислениях
+\end{enumerate}
+
+\textbf{Удачи на экзамене!}
+
+\end{document}

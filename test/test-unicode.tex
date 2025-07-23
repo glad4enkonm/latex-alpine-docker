@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+
+% For XeLaTeX/LuaLaTeX ONLY - Unicode support
+% DO NOT compile with pdflatex!
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{geometry}
+
+% Page setup
+\geometry{margin=1in}
+
+% Document metadata
+\title{Unicode LaTeX Test}
+\author{Docker Container}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Unicode Support Test}
+This document tests Unicode characters with XeLaTeX or LuaLaTeX engines.
+
+\subsection{Emojis and Symbols}
+\begin{itemize}
+    \item Status: ✅ Working
+    \item Celebration: 🎉
+    \item Docker: 🐳
+    \item File: 📄
+    \item Math: ∑ ∫ ∞ ≤ ≥ ≠
+    \item Arrows: → ← ↑ ↓ ⇒ ⇐
+\end{itemize}
+
+\subsection{International Characters}
+\begin{itemize}
+    \item French: café, naïve, résumé
+    \item German: Größe, weiß, Straße
+    \item Spanish: niño, año, corazón
+    \item Russian: Привет мир
+    \item Chinese: 你好世界
+    \item Japanese: こんにちは世界
+\end{itemize}
+
+\subsection{Mathematical Unicode}
+Using unicode-math package:
+\begin{equation}
+∫₀^∞ e^{-x²} dx = \frac{√π}{2}
+\end{equation}
+
+\section{Compilation Instructions}
+To compile this document with Unicode support:
+\begin{verbatim}
+xelatex test-unicode.tex
+\end{verbatim}
+or
+\begin{verbatim}
+lualatex test-unicode.tex
+\end{verbatim}
+
+\textbf{Note:} This document requires XeLaTeX or LuaLaTeX for proper Unicode rendering.
+
+\end{document}

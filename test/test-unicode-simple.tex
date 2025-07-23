@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{article}
+
+% For XeLaTeX/LuaLaTeX - Simple Unicode test
+\usepackage{fontspec}
+\usepackage{geometry}
+
+% Page setup
+\geometry{margin=1in}
+
+% Document metadata
+\title{Simple Unicode Test}
+\author{Docker Container}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Basic Unicode Support}
+This document tests Unicode characters that should work with default fonts.
+
+\subsection{European Characters}
+\begin{itemize}
+    \item French: cafe, naive, resume
+    \item German: Grosse, weiss, Strasse
+    \item Spanish: nino, ano, corazon
+    \item Nordic: Asa, Kobenhavn, Malmo
+\end{itemize}
+
+\subsection{Mathematical Unicode}
+\begin{itemize}
+    \item Basic: +- x / <= >= != ~ infinity
+    \item Arrows: -> <- up down => <= <=>
+\end{itemize}
+
+\subsection{Simple Symbols}
+\begin{itemize}
+    \item Currency: EUR GBP YEN
+    \item Legal: (C) (R) TM
+    \item Temperature: degrees C, degrees F
+\end{itemize}
+
+\section{Compilation}
+Compile with:
+\begin{verbatim}
+xelatex test-unicode-simple.tex
+\end{verbatim}
+or:
+\begin{verbatim}
+lualatex test-unicode-simple.tex
+\end{verbatim}
+
+\textbf{Note:} This version uses ASCII-safe characters.
+
+\end{document}

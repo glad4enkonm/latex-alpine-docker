@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{article}
+
+% For pdflatex - Limited Unicode support
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp}  % Additional symbols
+
+% Page setup
+\geometry{margin=1in}
+
+% Document metadata
+\title{pdflatex Unicode Test}
+\author{Docker Container}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Limited Unicode Support Test}
+This document tests Unicode characters that work with pdflatex (limited set).
+
+\subsection{Basic Symbols}
+\begin{itemize}
+    \item Copyright: \copyright
+    \item Registered: \textregistered
+    \item Trademark: \texttrademark
+    \item Degree: 25\textcelsius
+    \item Euro: \texteuro
+    \item Paragraph: \S
+\end{itemize}
+
+\subsection{Accented Characters}
+\begin{itemize}
+    \item French: caf\'e, na\"ive, r\'esum\'e
+    \item German: Gr\"o{\ss}e, wei{\ss}, Stra{\ss}e
+    \item Spanish: ni\~no, a\~no, coraz\'on
+    \item Nordic: \AA ngstr\"om, H\aa kon
+\end{itemize}
+
+\subsection{Mathematical Symbols}
+\begin{itemize}
+    \item Greek: $\alpha$, $\beta$, $\gamma$, $\pi$, $\sigma$, $\omega$
+    \item Math: $\leq$, $\geq$, $\neq$, $\approx$, $\infty$
+    \item Sets: $\in$, $\notin$, $\subset$, $\supset$, $\cap$, $\cup$
+    \item Arrows: $\rightarrow$, $\leftarrow$, $\Rightarrow$, $\Leftarrow$
+\end{itemize}
+
+\subsection{Mathematical Equations}
+\begin{equation}
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\end{equation}
+
+\begin{equation}
+\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+\end{equation}
+
+\section{Compilation}
+This document is designed for pdflatex:
+\begin{verbatim}
+pdflatex test-pdflatex-unicode.tex
+\end{verbatim}
+
+\textbf{Note:} For full Unicode support (emojis, CJK characters), use XeLaTeX or LuaLaTeX with the other test files.
+
+\end{document}

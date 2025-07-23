@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+
+% Basic packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Page setup
+\geometry{margin=1in}
+
+% Document metadata
+\title{LaTeX Alpine Docker Test}
+\author{Docker Container}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This is a test document to verify that the LaTeX Alpine Docker container is working correctly.
+
+\section{Math Example}
+Here's a simple mathematical equation:
+\begin{equation}
+E = mc^2
+\end{equation}
+
+And an inline formula: $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$
+
+\section{Lists}
+\subsection{Itemized List}
+\begin{itemize}
+    \item First item
+    \item Second item
+    \item Third item
+\end{itemize}
+
+\subsection{Enumerated List}
+\begin{enumerate}
+    \item Numbered item one
+    \item Numbered item two
+    \item Numbered item three
+\end{enumerate}
+
+\section{Conclusion}
+If you can see this PDF, the LaTeX Alpine Docker setup is working perfectly!
+
+\textbf{Container Info:}
+\begin{itemize}
+    \item Base: Alpine Linux
+    \item Engine: pdflatex, xelatex, lualatex
+    \item Status: Working
+\end{itemize}
+
+\end{document}
