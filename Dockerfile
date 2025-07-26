@@ -7,12 +7,9 @@ RUN apk add --no-cache \
     texlive-xetex \
     texlive-luatex \
     texlive-binextra \
-    texmf-dist-latex \
-    texmf-dist-latexrecommended \
-    texmf-dist-latexextra \
-    texmf-dist-xetex \
-    texmf-dist-luatex \
-    texmf-dist-mathscience \
+    texmf-dist-full \
+    py3-pygments \
+    inkscape \
     font-dejavu \
     font-liberation \
     make \
